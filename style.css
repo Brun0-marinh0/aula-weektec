@@ -17,15 +17,6 @@
     --colorPerfil:#ffffff;
 }
 
-html{
-    @media(max-width: 1080px){
-        font-size: 93.75%;
-    }
-    @media(max-width: 768px){
-        font-size: 85.3%
-    }
-}
-
 body{
     font-family: sans-serif;
     color: var(--color);
@@ -89,12 +80,14 @@ body{
     height: 100%;
     color: var(--colorPerfil);
 }
+
 /* animação =====================================================*/
 .perfil{
     animation: perfil 1s ease-in-out forwards;
     transform-origin: center;
     transform-box: fill-box;
 }
+
 @keyframes perfil{
     from{
         opacity: 0;
@@ -168,8 +161,6 @@ body{
         transform: translateY(0px);
     }
 }
-
-
 /* responsive===================================================== */
 @media(max-width: 700px){
     .container{
@@ -188,78 +179,120 @@ body{
     h2, p{
         font-size: 1rem;
     }
-
-
-
     /* animação======================================== */
     .about{
-        animation: about .5s .6s ease-in-out forwards;
+        animation: about .5s .6s cubic-bezier(0.1, 0.56, 0.58, 1) forwards;
         transform-origin: center;
         transform-box: fill-box;
         transform: translateX(700px);
     }
     @keyframes about{
-        from{
+        0%{
             opacity: 0;
             transform: translateX(700px);
         }
-        to{
+        25%{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+        50%{
+            opacity: 1;
+            transform: translateX(20px);
+        }
+        75%{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+        100%{
             opacity: 1;
             transform: translateX(0px);
         }
     }
     
     .projects{
-        animation: projects .5s .3s ease-in-out forwards;
+        animation: projects .5s .3s cubic-bezier(0.1, 0.56, 0.58, 1) forwards;
         transform-origin: center;
         transform-box: fill-box;
         transform: translateX(700px);
     }
     @keyframes projects{
-        from{
+        0%{
             opacity: 0;
             transform: translateX(700px);
         }
-        to{
+        25%{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+        50%{
+            opacity: 1;
+            transform: translateX(20px);
+        }
+        75%{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+        100%{
             opacity: 1;
             transform: translateX(0px);
         }
     }
     
     .links{
-        animation: links .5s .2s ease-in-out forwards;
+        animation: links .5s .2s cubic-bezier(0.1, 0.56, 0.58, 1) forwards;
         transform-origin: center;
         transform-box: fill-box;
         transform: translateY(700px);
     }
     @keyframes links{
-        from{
+        0%{
             opacity: 0;
             transform: translateX(700px);
         }
-        to{
+        25%{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+        50%{
+            opacity: 1;
+            transform: translateX(20px);
+        }
+        75%{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+        100%{
             opacity: 1;
             transform: translateX(0px);
         }
     }
     
     .skills{
-        animation: skills .5s .5s ease-in-out forwards;
+        animation: skills .5s .5s cubic-bezier(0.1, 0.56, 0.58, 1) forwards;
         transform-origin: center;
         transform-box: fill-box;
         transform: translateY(700px);
     }
     @keyframes skills{
-        from{
+        0%{
             opacity: 0;
             transform: translateX(700px);
         }
-        to{
+        25%{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+        50%{
+            opacity: 1;
+            transform: translateX(20px);
+        }
+        75%{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+        100%{
             opacity: 1;
             transform: translateX(0px);
         }
     }
-    
 }
-
-
