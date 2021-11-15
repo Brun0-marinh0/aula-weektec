@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --perfil:#43484B;
+    --about: #FFD078;
+    --projects:#EDA690;
+    --links:#6EB6DE;
+    --skills:#E45745;
+
+    --bg:#141414;
+
+    --color:#141414;
+    --colorPerfil:#ffffff;
+}
+
+html{
+    @media(max-width: 1080px){
+        font-size: 93.75%;
+    }
+    @media(max-width: 768px){
+        font-size: 85.3%
+    }
+}
+
+body{
+    font-family: sans-serif;
+    color: var(--color);
+    background: var(--bg);
+}
+
+.container{
+    display: grid;
+    grid-template: 1fr 1fr / repeat(4, 1fr);
+
+    width: 100%;
+    height: 100vh;
+    grid-template-areas: 
+        'perfil perfil about about'
+        'projects links skills skills'
+    ;
+
+    overflow: hidden;
+}
+.perfil{
+    background: var(--perfil);
+    grid-area: perfil;
+}
+.about{
+    background: var(--about);
+    grid-area: about;
+}
+.projects{
+    background: var(--projects);
+    grid-area: projects;
+}
+.links{
+    background: var(--links);
+    grid-area: links;
+}
+.skills{
+    background: var(--skills);
+    grid-area: skills;
+}
+
+.informContainer{
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    position: relative;
+}
+.informContainer i{
+    margin-left: 0;
+    transition: .5s;
+}
+.informContainer:hover i{
+    margin-left: 1rem;
+}
+.informPerfil{
+    padding: 2vw;
+    background-image: url(./image.png);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    color: var(--colorPerfil);
+}
+/* animação =====================================================*/
+.perfil{
+    animation: perfil 1s ease-in-out forwards;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+@keyframes perfil{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.about{
+    animation: about .5s ease-in-out forwards;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+@keyframes about{
+    from{
+        opacity: 0;
+        transform: translateX(400px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.projects{
+    animation: projects .5s ease-in-out forwards;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+@keyframes projects{
+    from{
+        opacity: 0;
+        transform: translateY(400px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.links{
+    animation: links .5s .2s ease-in-out forwards;
+    transform-origin: center;
+    transform-box: fill-box;
+    transform: translateY(400px);
+}
+@keyframes links{
+    from{
+        opacity: 0;
+        transform: translateY(400px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.skills{
+    animation: skills .5s .5s ease-in-out forwards;
+    transform-origin: center;
+    transform-box: fill-box;
+    transform: translateY(400px);
+}
+@keyframes skills{
+    from{
+        opacity: 0;
+        transform: translateY(400px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+/* responsive===================================================== */
+@media(max-width: 700px){
+    .container{
+        grid-template: 1fr repeat(4, .5fr) / 1fr;
+        grid-template-areas: 
+            'perfil'
+            'about'
+            'skills'
+            'projects'
+            'links'
+        ;
+    }
+    h1{
+        font-size: 1.3rem;
+    }
+    h2, p{
+        font-size: 1rem;
+    }
+
+
+
+    /* animação======================================== */
+    .about{
+        animation: about .5s .6s ease-in-out forwards;
+        transform-origin: center;
+        transform-box: fill-box;
+        transform: translateX(700px);
+    }
+    @keyframes about{
+        from{
+            opacity: 0;
+            transform: translateX(700px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    
+    .projects{
+        animation: projects .5s .3s ease-in-out forwards;
+        transform-origin: center;
+        transform-box: fill-box;
+        transform: translateX(700px);
+    }
+    @keyframes projects{
+        from{
+            opacity: 0;
+            transform: translateX(700px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    
+    .links{
+        animation: links .5s .2s ease-in-out forwards;
+        transform-origin: center;
+        transform-box: fill-box;
+        transform: translateY(700px);
+    }
+    @keyframes links{
+        from{
+            opacity: 0;
+            transform: translateX(700px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    
+    .skills{
+        animation: skills .5s .5s ease-in-out forwards;
+        transform-origin: center;
+        transform-box: fill-box;
+        transform: translateY(700px);
+    }
+    @keyframes skills{
+        from{
+            opacity: 0;
+            transform: translateX(700px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    
+}
+
+
